@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-al(#yny-1qiurwfa@*d@^4qrx)1g@zjj5!vb4+blz5ov5gy%6f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'graphs',
 ]
 
 MIDDLEWARE = [
@@ -76,12 +77,14 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+   'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'userinfo',
         'USER': 'root',
         'PASSWORD': 'Teju@1206172'
-    }
+        'HOST': '54.83.124.49',
+        'PORT': '3306',
+   }
 }
 
 
